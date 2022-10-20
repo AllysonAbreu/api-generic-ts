@@ -2,6 +2,10 @@ import express,{Request,Response} from 'express'
 
 const app = express()
 
+app.listen(3000, () => {
+    console.log('Servidor ativo na porta 3000.')
+})
+
 app.use(express.json())
 
 app.get('/home', (req,res) => {
@@ -9,8 +13,7 @@ app.get('/home', (req,res) => {
             .send('Server rodando na porta 3000.')
 })
 
-app.listen(3000, () => {
-    console.log('Servidor ativo.')
-})
+
+
 
 
